@@ -1,0 +1,91 @@
+html {
+    font-family: 'Consolas', sans-serif;
+
+    --ansi-green: #a0d470;
+    --ansi-red: #d47070;
+    --ansi-blue: #7770d4;
+    --white-primary: rgb(197, 193, 193);
+    --white-muted: rgb(156, 154, 154);
+    --background-primary: #71685c38;
+    --background: #110e0b;
+    --background-fade: #1a1612;
+    --text-primary: rgb(240, 218, 202);
+}
+
+body {
+    background: rgb(84,95,154);
+    background: linear-gradient(333deg, var(--background) 0%, var(--background-fade) 100%);
+    background-attachment: fixed;
+}
+
+a {
+    color: var(--ansi-blue);
+}
+
+@keyframes terminal-blinker {
+    0% {
+        background: white;
+    }
+    50% {
+        background: transparent;    
+    }
+    100% {
+        background: white;
+    }
+}
+
+.ansi-green {
+    color: var(--ansi-green);
+}
+.ansi-red {
+    color: var(--ansi-red);
+}
+.ansi-blue {
+    color: var(--ansi-blue);
+}
+
+.terminal-blinker {
+    width: 1em;
+    display: inline-block;
+    margin-left: 1em;
+    height: 0.2em;
+    animation-name: terminal-blinker;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+.body-main {
+    max-width: 35em;
+    margin: auto;
+    margin-top: 5em;
+}
+
+.body-content {
+    border: solid 1px var(--white-primary);
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    padding: 0px 2em;
+    margin-top: 0.25em;
+}
+
+.body-content > h4 {
+    border-bottom: 1px solid var(--white-muted)
+}
+
+.center {
+    text-align: center;
+}
+
+.quote {
+    border-left: 1px dotted var(--white-muted);
+    padding-left: 1em;
+}
+
+.gh-link {
+    background: var(--background);
+    border: 1px solid var(--white-primary);
+    color: var(--text-primary);
+    padding: 0.25em;
+    margin-left: 23.95em;
+    white-space: nowrap;
+}
