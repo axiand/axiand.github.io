@@ -1,6 +1,7 @@
 html {
     font-family: Cambria, sans-serif;
     --background: #444054;
+    --background-plus: #524d64;
     --foreground: #F9DEC9;
     --link: #cbcef5;
 
@@ -115,6 +116,14 @@ article>p:has(time) {
 
 img {
     max-height: 16em;
+}
+
+code {
+    display: block;
+    background-color: var(--background-plus);
+    padding: 0.5em;
+    border-radius: 0.15em;
+    border: 1px var(--foreground) solid;
 }
 
 @keyframes terminal-blinker {
