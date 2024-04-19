@@ -12,6 +12,7 @@ body {
     background-attachment: fixed;
     max-width: 40em;
     margin: 4em auto;
+    word-wrap: break-word;
 }
 
 hr {
@@ -104,6 +105,18 @@ aside>p {
     font-size: medium;
 }
 
+article>p>time {
+    font-size: small;
+}
+
+article>p:has(time) {
+    margin-top: -1.75em;
+}
+
+img {
+    max-height: 16em;
+}
+
 @keyframes terminal-blinker {
     0% {
         background: var(--foreground);
@@ -141,4 +154,11 @@ aside>p {
     background-color: var(--foreground);
     color: var(--background);
     padding: 0.15em;
+}
+
+.image-description {
+    font-size: normal;
+    text-align: center;
+    margin-top: 0.15em;
+    color: var(--link)
 }
