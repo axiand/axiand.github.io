@@ -124,6 +124,15 @@ code {
     padding: 0.5em;
     border-radius: 0.15em;
     border: 1px var(--foreground) solid;
+    font-size: large;
+    color: var(--foreground);
+}
+
+p>code {
+    display: inline;
+    font-size: small;
+    border: none;
+    padding: 0.15em;
 }
 
 @keyframes terminal-blinker {
