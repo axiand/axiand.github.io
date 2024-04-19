@@ -3,6 +3,8 @@ html {
     --background: #444054;
     --foreground: #F9DEC9;
     --link: #cbcef5;
+
+    overflow-x: auto;
 }
 
 body {
@@ -73,6 +75,33 @@ h2 {
     color: var(--background);
     width: fit-content;
     padding: 0.15em;
+}
+
+aside {
+    position: relative;
+    left: 42em;
+    height: 0em;
+    width: 12em;
+    display: flow-root;
+}
+
+@media (width <=70em) {
+    aside {
+        position: unset;
+        display: block;
+        height: fit-content;
+    }
+}
+
+aside>* {
+    border-left: 1px var(--link) dotted;
+    margin: 0px;
+    padding: 0.3em 0px;
+    padding-left: 1em;
+}
+
+aside>p {
+    font-size: medium;
 }
 
 @keyframes terminal-blinker {
