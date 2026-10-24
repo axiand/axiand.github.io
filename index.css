@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", system-ui, sans-serif;
+
+    --bg-size: 34em;
+    --fg-color: #383838;
+}
+
+@media (width < 34em) {
+    .bg {
+        max-width: 100vw !important;
+        height: unset !important;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    position-anchor: --bg-anchor;
+    top: anchor(top);
+    width: 13em;
+}
+
+.bg {
+    anchor-name: --bg-anchor;
+    width: var(--bg-size);
+    height: var(--bg-size);
+}
+
+.badges {
+    margin-top: 1em;
+
+    & img {
+        filter: grayscale(1) contrast(1.5);
+        transition: filter 0.2s;
+
+        &:hover {
+            filter: none !important;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+i,
+u,
+s {
+    color: var(--fg-color);
+}
+
+a {
+    color: var(--fg-color);
+    text-decoration: dotted underline;
+}
+
+a:has(img) {
+    text-decoration: none;
+}
+
+a:not(:has(img))::before {
+    content: "» ";
+}
+
+hr {
+    border: none;
+    border-top: #adadad 1px solid;
+}
